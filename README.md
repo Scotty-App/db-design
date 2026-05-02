@@ -25,15 +25,15 @@ database/
 ### Diseño conceptual y lógico
 | Sección | Descripción | Enlace |
 |---|---|---|
-| 4.4.1 | Diagrama Entidad-Relación (E-R) | [docs/er/README.md](docs/er/README.md) |
-| 4.4.2 | Modelo Relacional | [docs/relational/README.md](docs/relational/README.md) |
-| 4.4.3 | Diagrama visual de tablas | [docs/sql-diagram/README.md](docs/sql-diagram/README.md) |
+| 4.4.1 | Diagrama Entidad-Relación (E-R) | [docs/er/README.md]([docs/er/README.md](https://github.com/Scotty-App/db-design/tree/main/docs/er)) |
+| 4.4.2 | Modelo Relacional | [docs/relational/README.md]([docs/relational/README.md](https://github.com/Scotty-App/db-design/tree/main/docs/relational)) |
+| 4.4.3 | Diagrama visual de tablas | [docs/sql-diagram/README.md]([docs/sql-diagram/README.md](https://github.com/Scotty-App/db-design/tree/main/docs/sql-diagram)) |
 
 ### Implementación SQL
 | Sección | Descripción | Enlace |
 |---|---|---|
-| DDL | Script completo de creación de tablas | [sql/ddl/README.md](sql/ddl/README.md) |
-| Triggers | Automatización de estados con triggers | [sql/triggers/README.md](sql/triggers/README.md) |
+| DDL | Script completo de creación de tablas | [sql/ddl/README.md]([sql/ddl/README.md](https://github.com/Scotty-App/db-design/tree/main/sql/ddl)) |
+| Triggers | Automatización de estados con triggers | [sql/triggers/README.md](https://github.com/Scotty-App/db-design/tree/main/sql/triggers) |
 
 ---
 
