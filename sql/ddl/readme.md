@@ -1,10 +1,41 @@
-## 4.4.3 Script SQL de creación de tablas
- 
-Con el modelo relacional definido, hemos trasladado toda la estructura a SQL Server. Hay algunas decisiones que tomamos durante la implementación que merece la pena comentar:
- 
-Para garantizar la integridad de los datos desde la propia base de datos, hemos aplicado constraints CHECK en todos los campos que solo admiten valores concretos: el formato del email, el estado de sesión, los lenguajes disponibles, el estado del canje y el estado del nivel. Así no dependemos únicamente de las validaciones del backend.
- 
-Para los campos con valores predecibles hemos definido valores por defecto directamente en la tabla: State_Session arranca como 'disabled', el Status del canje como 'pending', el State del nivel como 'BLOQUEADO' y todas las fechas toman el valor del momento de inserción con GETDATE().
- 
-La tabla STUD_LEVEL_PLAY tiene una clave primaria compuesta por tres campos: IdUser, IdGames y Num_Level, ya que necesitamos identificar de forma única cada combinación de estudiante y nivel para registrar correctamente su progreso individual.
- 
+# DDL — Script de creación de tablas
+
+Este directorio contiene el script SQL completo para crear toda la estructura de la base de datos de Scotty App en SQL Server.
+
+---
+
+## Cómo ejecutar
+
+1. Abre SQL Server Management Studio (SSMS)
+2. Conéctate a tu instancia de SQL Server
+3. Abre el archivo `SQLScotty.sql`
+4. Ejecuta el script completo (`F5` o botón Execute)
+
+> ⚠️ Asegúrate de crear primero la base de datos y seleccionarla antes de ejecutar el script.
+
+---
+
+## Qué crea este script
+
+| Tabla | Descripción |
+|---|---|
+| `USER` | Tabla base de todos los usuarios del sistema |
+| `STUDENT` | Especialización de USER para alumnos (XP y tokens) |
+| `ADMINISTRATION` | Especialización de USER para administradores |
+| `GAMES` | Juegos/lenguajes de programación disponibles |
+| `LEVEL` | Niveles de cada juego (entidad débil) |
+| `STUD_LEVEL_PLAY` | Progreso individual de cada alumno por nivel |
+| `CANJE` | Solicitudes de canje de tokens por recompensas |
+| `ADMIN_CANJE_VALID` | Validaciones de canjes realizadas por administradores |
+
+---
+
+## Archivos
+
+| Archivo | Descripción |
+|---|---|
+| `SQLScotty.sql` | Script DDL completo de creación de tablas |
+
+---
+
+⬅️ [Diagrama SQL](../../docs/sql-diagram/README.md) · ➡️ [Triggers](../triggers/README.md)
