@@ -1,6 +1,8 @@
 ## 4.4.1 Diagrama Entidad-Relación (E-R)
  
 Para diseñar la base de datos hemos identificado las entidades principales del sistema y cómo se relacionan entre sí, siguiendo la notación estudiada en el módulo de Bases de Datos.
+
+![Diagrama E-R](ERDiagramaScotty.png)
  
 **Usuarios y tipos de acceso**
  
@@ -23,3 +25,16 @@ La relación play entre STUDENT y LEVEL resuelve el muchos a muchos: un estudian
 CANJE registra cada solicitud de canje de tokens. Guardamos el nombre y tipo de recompensa, el coste en tokens, la fecha de solicitud y el estado actual. Cada canje debe ser validado por un administrador a través de la relación validate, que registra si fue aprobado, la razón de rechazo si procede y la fecha de validación.
  
 Es importante destacar que CANJE tiene un campo status y la relación validate tiene un campo approved. Para evitar inconsistencias entre ambos, el status del canje se actualizará automáticamente mediante un trigger en base de datos cada vez que el administrador registre una validación, garantizando que ambos campos estén siempre sincronizados.
+
+---
+ 
+## Archivos
+ 
+| Archivo | Descripción |
+|---|---|
+| `ERDiagramaScotty.png` | Imagen exportada del diagrama E-R |
+| `ERDiagramaScotty.dia~` | Archivo fuente editable (Dia) |
+ 
+---
+ 
+⬅️ [Volver al índice](../../README.md) · ➡️ [Modelo Relacional](../relational/README.md)
