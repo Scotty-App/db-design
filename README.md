@@ -6,6 +6,7 @@
 
 ## 📁 Estructura del repositorio
 
+```
 database/
 ├── docs/
 │   ├── er/              → Diagrama Entidad-Relación
@@ -16,9 +17,7 @@ database/
     ├── ddl/             → Script de creación de tablas
     ├── triggers/        → Triggers de automatización
     └── procedures/      → Stored Procedures
-
-
----
+```
 
 ## 📚 Índice de documentación
 
